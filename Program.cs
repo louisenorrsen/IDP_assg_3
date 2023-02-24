@@ -87,6 +87,11 @@
             {
                 if (grundämne.typ == "metall") Console.WriteLine(grundämne.namn);
             }
+            Console.WriteLine("\n---- GRUNDÄMNEN MED SMÄLTPUNKT UNDER 0°C OCH KOKPUNKT ÖVER 0°C ----");
+            foreach (Grundämne grundämne in ämnen)
+            {
+                if (grundämne.smältpunkt < 273.16 && grundämne.kokpunkt > 273.16) Console.WriteLine(grundämne.namn);
+            }
         }
     }
 }
