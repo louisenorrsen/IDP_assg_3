@@ -77,6 +77,11 @@
                     kokpunkt = 629.88
                 }
             };
+
+            foreach (Grundämne grundämne in ämnen)
+            {
+                grundämne.Print();
+            }
         }
     }
 }
