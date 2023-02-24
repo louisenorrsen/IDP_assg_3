@@ -7,6 +7,14 @@
             public string namn = string.Empty, typ=string.Empty;
             public int Z;
             public double smältpunkt, kokpunkt;
+
+            public void Print()
+            {
+                Console.WriteLine($"Grundämne: {namn}");
+                Console.WriteLine($"   Typ: {typ}");
+                Console.WriteLine($"   Smältpunkt: {smältpunkt} K");
+                Console.WriteLine($"   Kokpunkt: {kokpunkt} K");
+            }
         }
         static void Main(string[] args)
         {
@@ -34,6 +42,10 @@
                 smältpunkt = 1337.33,
                 kokpunkt = 3243
             };
+
+            syre.Print();
+            järn.Print();
+            guld.Print();
         }
     }
 }
