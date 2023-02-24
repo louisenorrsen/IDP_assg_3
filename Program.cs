@@ -49,8 +49,8 @@
 
             Grundämne[] ämnen = new Grundämne[6]
             {
-                syre, 
-                järn, 
+                syre,
+                järn,
                 guld,
                 new()
                 {
@@ -67,7 +67,7 @@
                     typ = "ickemetall",
                     smältpunkt = 265.8,
                     kokpunkt = 332.0
-                }, 
+                },
                 new()
                 {
                     namn = "Kvicksilver",
@@ -77,10 +77,15 @@
                     kokpunkt = 629.88
                 }
             };
-
+            Console.WriteLine("-------- ALLA GRUNDÄMNEN --------");
             foreach (Grundämne grundämne in ämnen)
             {
                 grundämne.Print();
+            }
+            Console.WriteLine("----------- METALLER ------------");
+            foreach (Grundämne grundämne in ämnen)
+            {
+                if (grundämne.typ == "metall") Console.WriteLine(grundämne.namn);
             }
         }
     }
